@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LoginController::class,'index']);
+Route::get('/login', [LoginController::class,'login']);

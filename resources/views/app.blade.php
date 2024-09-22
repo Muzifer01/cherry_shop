@@ -4,5 +4,6 @@
     <body data-bs-theme="dark">
         {!! $header !!}  {{-- Mostrar el HTML renderizado del header --}}
         {!! $content !!} {{-- Mostrar el HTML renderizado del content --}}
+        {!! $footer !!} {{-- Mostrar el HTML renderizado del footer --}}
     </body>
 </html>
