@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Inicio</a>
+          <a class="nav-link" href="/">Inicio</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -16,7 +16,7 @@
           </a>
           <ul class="dropdown-menu">
             @foreach($categories as $item)
-              <li><a class="dropdown-item" href="{{ $item['url'] }}">{{ $item['name'] }}</a></li>
+              <li><a class="dropdown-item" href="{{ url($item['url']) }}">{{ $item['name'] }}</a></li>
             @endforeach
           </ul>
         </li>
@@ -27,7 +27,7 @@
           </a>
           <ul class="dropdown-menu">
             @foreach($brands as $item)
-              <li><a class="dropdown-item" href="{{ $item['url'] }}">{{ $item['name'] }}</a></li>
+              <li><a class="dropdown-item" href="{{ url($item['url']) }}">{{ $item['name'] }}</a></li>
             @endforeach
           </ul>
         </li>

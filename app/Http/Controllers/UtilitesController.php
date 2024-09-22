@@ -8,24 +8,24 @@ class UtilitesController extends Controller
 {
     public $components = [
         'categories' => [
-            ["name" => "Zapato", "url" => "/"],
-            ["name" => "Tenis", "url" => "/tenis"],
-            ["name" => "Zapatillas", "url" => "/zapatillas"],
-            ["name" => "Tacones", "url" => "/tacones"]
+            ["name" => "Zapato", "url" => "car_shop/zapato"],
+            ["name" => "Tenis", "url" => "car_shop/tenis"],
+            ["name" => "Zapatillas", "url" => "car_shop/zapatillas"],
+            ["name" => "Tacones", "url" => "car_shop/tacones"]
         ],
         'session' => [
             ["name" => "Iniciar Sesión", "url" => "/login"],
             ["name" => "Registrarse", "url" => "/register"]
         ],
         'brands' => [
-            ["name" => "Nike", "url" => "/nike"],
-            ["name" => "Adidas", "url" => "/adidas"],
-            ["name" => "Puma", "url" => "/puma"],
-            ["name" => "Reebok", "url" => "/reebok"],
-            ["name" => "Vans", "url" => "/vans"],
-            ["name" => "Converse", "url" => "/converse"],
-            ["name" => "Fila", "url" => "/fila"],
-            ["name" => "Asics", "url" => "/asics"],
+            ["name" => "Nike", "url" => "car_shop/nike"],
+            ["name" => "Adidas", "url" => "car_shop/adidas"],
+            ["name" => "Puma", "url" => "car_shop/puma"],
+            ["name" => "Reebok", "url" => "car_shop/reebok"],
+            ["name" => "Vans", "url" => "car_shop/vans"],
+            ["name" => "Converse", "url" => "car_shop/converse"],
+            ["name" => "Fila", "url" => "car_shop/fila"],
+            ["name" => "Asics", "url" => "car_shop/asics"],
             ["name" => "Registrarse", "url" => "/register"]
         ]
     ];
@@ -41,11 +41,11 @@ class UtilitesController extends Controller
             ["name" => "Dirección:"]
         ],
         'social' => [
-            ["name" => "Facebook", "url" => "/facebook"],
-            ["name" => "Instagram", "url" => "/instagram"],
-            ["name" => "Twitter", "url" => "/twitter"],
-            ["name" => "LinkedIn", "url" => "/linkedin"],
-            ["name" => "YouTube", "url" => "/youtube"]
+            ["name" => "Facebook", "url" => "https://www.facebook.com/"],
+            ["name" => "Instagram", "url" => "https://www.instagram.com/"],
+            ["name" => "Twitter", "url" => "https://www.twitter.com/"], 
+            ["name" => "LinkedIn", "url" => "https://www.linkedin.com/"],
+            ["name" => "YouTube", "url" => "https://www.youtube.com/"]
         ],
         'legal' => [
             [

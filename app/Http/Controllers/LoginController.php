@@ -27,4 +27,16 @@ class LoginController extends UtilitesController
         $content = view("login")->render();
         return view('app', ['header' => $this->header(),'content' => $content, 'footer' => $this->footer()]);
     }
+
+    public function register()
+    {
+        $content = view("register")->render();
+        return view('app', ['header' => $this->header(),'content' => $content, 'footer' => $this->footer()]);
+    }
+
+    public function car_shop($arg)
+    {
+        $content = view("components.car_shop", ['arg' => $arg])->render();
+        return view('app', ['header' => $this->header(),'content' => $content, 'footer' => $this->footer()]);
+    }
 }
