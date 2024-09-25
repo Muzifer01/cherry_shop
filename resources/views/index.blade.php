@@ -9,8 +9,8 @@
             <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                 <img class="d-block w-100 carousel-image" src="{{ $item['url'] }}" alt="{{ $item['name'] }}">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>{{ $item['name'] }}</h5>
-                    <p>{{ $item['description'] ?? '' }}</p>
+                    <h5 class="carousel-title">{{ $item['name'] }}</h5>
+                    <p class="carousel-description">{{ $item['description'] ?? '' }}</p>
                 </div>
             </div>
         @endforeach
@@ -47,9 +47,20 @@
 }
 
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     padding: 20px;
+}
+
+.carousel-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.carousel-description {
+    color: #f0f0f0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .carousel-indicators [data-bs-target] {

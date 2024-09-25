@@ -51,5 +51,6 @@
         </ul>
       </li>
     </ul>
+    <a href="/car_shop/my_car"><i class="bi bi-cart"></i></a>
   </div>
 </nav>
