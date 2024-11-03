@@ -20,8 +20,62 @@ class LoginController extends UtilitesController
             ["name" => "Venta de vehículos", "description" => "En nuestra concesionaria, puedes encontrar una amplia gama de vehículos nuevos y usados de las marcas más reconocidas."],
             ["name" => "Servicio de alquiler", "description" => "Ofrecemos servicios de alquiler de vehículos para satisfacer tus necesidades de transporte."]
         ];
-        $content = view("index", ['carrousel' => $carrousel, 'services' => $services])->render();
-        return view('app', ['header' => $this->header(),'content' => $content, 'footer' => $this->footer()]);
+        $cards = [
+            [
+                "src" => "https://imgs.search.brave.com/VXFeOQESbEeoM3Fgg0dtMGu_gw5a8KyZ78wUjBqeJRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83Lzc3L0R1/c3RfamFja2V0Lmpw/Zy81MTJweC1EdXN0/X2phY2tldC5qcGc",
+                "card-title" => "Libro Disponible",
+                "card-text" => "Contenido del Libro",
+            ],
+            [
+                "src" => "https://imgs.search.brave.com/VXFeOQESbEeoM3Fgg0dtMGu_gw5a8KyZ78wUjBqeJRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83Lzc3L0R1/c3RfamFja2V0Lmpw/Zy81MTJweC1EdXN0/X2phY2tldC5qcGc",
+                "card-title" => "Libro Disponible",
+                "card-text" => "Contenido del Libro",
+            ],
+            [
+                "src" => "https://imgs.search.brave.com/VXFeOQESbEeoM3Fgg0dtMGu_gw5a8KyZ78wUjBqeJRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83Lzc3L0R1/c3RfamFja2V0Lmpw/Zy81MTJweC1EdXN0/X2phY2tldC5qcGc",
+                "card-title" => "Libro Disponible",
+                "card-text" => "Contenido del Libro",
+            ],
+            [
+                "src" => "https://imgs.search.brave.com/VXFeOQESbEeoM3Fgg0dtMGu_gw5a8KyZ78wUjBqeJRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83Lzc3L0R1/c3RfamFja2V0Lmpw/Zy81MTJweC1EdXN0/X2phY2tldC5qcGc",
+                "card-title" => "Libro Disponible",
+                "card-text" => "Contenido del Libro",
+            ],
+            [
+                "src" => "https://imgs.search.brave.com/VXFeOQESbEeoM3Fgg0dtMGu_gw5a8KyZ78wUjBqeJRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83Lzc3L0R1/c3RfamFja2V0Lmpw/Zy81MTJweC1EdXN0/X2phY2tldC5qcGc",
+                "card-title" => "Libro Disponible",
+                "card-text" => "Contenido del Libro",
+            ],
+            [
+                "src" => "https://imgs.search.brave.com/VXFeOQESbEeoM3Fgg0dtMGu_gw5a8KyZ78wUjBqeJRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83Lzc3L0R1/c3RfamFja2V0Lmpw/Zy81MTJweC1EdXN0/X2phY2tldC5qcGc",
+                "card-title" => "Libro Disponible",
+                "card-text" => "Contenido del Libro",
+            ],
+            [
+                "src" => "https://imgs.search.brave.com/VXFeOQESbEeoM3Fgg0dtMGu_gw5a8KyZ78wUjBqeJRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83Lzc3L0R1/c3RfamFja2V0Lmpw/Zy81MTJweC1EdXN0/X2phY2tldC5qcGc",
+                "card-title" => "Libro Disponible",
+                "card-text" => "Contenido del Libro",
+            ],
+            [
+                "src" => "https://imgs.search.brave.com/VXFeOQESbEeoM3Fgg0dtMGu_gw5a8KyZ78wUjBqeJRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83Lzc3L0R1/c3RfamFja2V0Lmpw/Zy81MTJweC1EdXN0/X2phY2tldC5qcGc",
+                "card-title" => "Libro Disponible",
+                "card-text" => "Contenido del Libro",
+            ],
+        ];
+
+        $content = view(
+            "index", 
+            [
+                'carrousel' => $carrousel, 
+                'services' => $services,
+                'cards' => $cards
+            ])->render();
+
+        return view('app', [
+            'header' => $this->header(),
+            'content' => $content, 
+            'footer' => $this->footer()
+        ]);
     }
     public function login()
     {

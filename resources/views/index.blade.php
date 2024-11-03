@@ -39,6 +39,25 @@
       @endforeach
     </div>
 </div>
+<hr/>
+<div class="container mt-5">
+    <div class="row g-4"> <!-- Añade 'g-4' para espaciar las cards -->
+        @foreach($cards as $item)
+            <div class="col-lg-4 col-md-6"> <!-- Ajusta el tamaño de columnas en diferentes dispositivos -->
+                <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                    <!-- Añade sombra suave, sin borde, esquinas redondeadas, y asegura que ocupe la altura completa -->
+                    <img class="card-img-top" src="{{ $item['src'] }}" alt="Card image cap" style="object-fit: cover; height: 200px;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold text-primary">{{ $item['card-title'] }}</h5>
+                        <p class="card-text text-muted">{{ $item['card-text'] }}</p>
+                        <a href="#" class="btn btn-success mt-auto">Ver más</a>
+                        <!-- Cambié el botón a color verde usando 'btn-success' -->
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
 
 <style>
 .carousel-image {
